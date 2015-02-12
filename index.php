@@ -1,5 +1,6 @@
 <?php get_header (); ?>
-		<section>
+<div class="clearfix">
+		<section class="main">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/limes.jpg" />
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<section>
@@ -9,7 +10,9 @@
 				<p>We also make arepas on the side.</p> -->
 			</section>
 		<?php endwhile; else: ?>
-			<p>?php _e('Sorry, no content'); ?></p>
-		<?php endif; ?>
+		<p>?php _e('Sorry, no content'); ?></p>
+	<?php endif; ?>
 		</section>
+		<?php get_sidebar(); ?>
+</div>
 <?php get_footer (); ?>
